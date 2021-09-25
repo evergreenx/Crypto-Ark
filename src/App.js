@@ -1,9 +1,9 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Sidebar from 'components/Sidebar';
-import Dashboard from 'pages/Dashboard';
-import Settings from 'pages/Settings';
-import Tables from 'pages/Tables';
-import Maps from 'pages/Maps';
+import Home from 'pages/Home';
+import Cryptocurrencies from 'pages/Cryptocurrencies';
+import Exchanges from 'pages/Exchanges';
+import News from 'pages/News';
 import Footer from 'components/Footer';
 import Profile from 'pages/Profile'
 
@@ -16,10 +16,10 @@ function App() {
             <Sidebar />
             <div className="md:ml-64">
                 <Switch>
-                    <Route exact path="/" component={Dashboard} />
-                    <Route exact path="/settings" component={Settings} />
-                    <Route exact path="/tables" component={Tables} />
-                    <Route exact path="/maps" component={Maps} />
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/cryptocurrencies" component={Cryptocurrencies} />
+                    <Route exact path="/exchanges" component={Exchanges} />
+                    <Route exact path="/news" component={News} />
                     <Route exact path="/profile" component={Profile} />
 
                     <Redirect from="*" to="/" />
