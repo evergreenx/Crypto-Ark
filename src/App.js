@@ -5,6 +5,7 @@ import Settings from 'pages/Settings';
 import Tables from 'pages/Tables';
 import Maps from 'pages/Maps';
 import Footer from 'components/Footer';
+import Profile from 'pages/Profile'
 
 // Tailwind CSS Style Sheet
 import 'assets/styles/tailwind.css';
@@ -19,6 +20,8 @@ function App() {
                     <Route exact path="/settings" component={Settings} />
                     <Route exact path="/tables" component={Tables} />
                     <Route exact path="/maps" component={Maps} />
+                    <Route exact path="/profile" component={Profile} />
+
                     <Redirect from="*" to="/" />
                 </Switch>
                 <Footer />
