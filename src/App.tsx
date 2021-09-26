@@ -1,16 +1,16 @@
 import { Switch, Route, Redirect } from "react-router-dom";
-import Sidebar from "components/Sidebar";
-import Home from "pages/Home";
-import Cryptocurrencies from "pages/Cryptocurrencies";
-import CrytoDetails from "pages/CrytoDetails";
+import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
+import Cryptocurrencies from "./pages/Cryptocurrencies";
+import CrytoDetails from "./pages/CryptoDetails";
 
-import Exchanges from "pages/Exchanges";
-import News from "pages/News";
-import Footer from "components/Footer";
-import Profile from "pages/Profile";
+import Exchanges from "./pages/Exchanges";
+import News from "./pages/News";
+import Footer from "./components/Footer";
+import Profile from "./pages/Profile";
 
 // Tailwind CSS Style Sheet
-import "assets/styles/tailwind.css";
+import "./assets/styles/tailwind.css";
 
 function App() {
   return (
