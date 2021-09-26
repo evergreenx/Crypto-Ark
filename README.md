@@ -1,14 +1,15 @@
 ## Project Name & Pitch
 
 
-![crypto Ark lgog](https://res.cloudinary.com/evergreenx/image/upload/v1632614368/crypto_ark_rbdfif.jpg)
+![crypto Ark lgog](https://res.cloudinary.com/evergreenx/image/upload/v1632615874/crypto_ark_1_hs7ztc.png)
+
 Crypto Ark 
 
-An application used all things cryptocurrencies , where users get news , exchanges and more built with React, Redux toolkit, and Tailwind css.
+An application used all for things cryptocurrencies , where users get news , exchanges and more built with React, Redux toolkit, and Tailwind css.
 
 ## Project Status
 
-This project is currently in development.More featues will be added as time goes by.
+This project is currently in development.More features will be added as time goes by.
 
 
 ## Project Screen Shot(s)
