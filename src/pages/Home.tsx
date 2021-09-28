@@ -10,7 +10,7 @@ import News from "../pages/News";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 
 export default function Dashboard() {
-  const { data, isFetching } = useGetCryptosQuery();
+  const { data, isFetching } = useGetCryptosQuery(10);
 
   let globalstats = data?.data?.stats;
 
@@ -21,6 +21,7 @@ export default function Dashboard() {
   }
   return (
     <>
+    
       <div className=" container px-8 pt-9">
         <h2 className="text-2xl  my-4 font-extrabold">
           Global Cryptocurrencies Statistics
@@ -49,24 +50,33 @@ export default function Dashboard() {
         </div>
 
         <div className=" py-10">
-          <div className="header flex items-center justify-between">
+          <div className="">
 
 
             <div className="">
 
-            <h2 className="text-2xl  my-4 font-extrabold">
+<div className=" flex items-center justify-between">
+
+<h2 className="text-2xl  my-4 font-extrabold">
               Top Ten Cryptocurrencies in the world{" "}
             </h2>
 
-
-            <Cryptocurrencies />
-            </div>
-          
-
-            <Link to="/crytocurrencies" className="font-medium">
+            <Link to="/news" className="font-medium">
               {" "}
               See more{" "}
             </Link>
+
+</div>
+
+
+
+
+            <Cryptocurrencies simiplied />
+            </div>
+          
+
+
+          
           </div>
 
           {/* <Cryptocurrencies /> */}
