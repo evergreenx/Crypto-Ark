@@ -13,19 +13,18 @@ type GlobalStatsCardType = {
 const GlobalStatsCard = ({ data , title }: GlobalStatsCardType) => {
   return (
     <>
-      <Card className="h-48">
+      <Card className="h">
         <CardRow>
           {/* <CardHeader color="lightBlue" size="lg" iconOnly>
                     <Icon name="groups" size="5xl" color="white" />
                 </CardHeader> */}
 
-          <CardStatus title={title} amount={data} classNmae="left" />
+          <CardStatus title={title} amount={data} className="left font-extrabold" />
         </CardRow>
 
-        {/* <CardStatusFooter color="green" amount="97%" date="Since one week">
-                <Icon color="green" name="arrow_upward" />
-            </CardStatusFooter> */}
       </Card>
+
+
     </>
   );
 };
