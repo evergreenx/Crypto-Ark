@@ -3,11 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import GlobalStatsCard from "../components/GlobalStatsCard";
 
-import Cryptocurrencies from "../pages/Cryptocurrencies"
-import News from "../pages/News"
+import Cryptocurrencies from "../pages/Cryptocurrencies";
+
+import News from "../pages/News";
 
 import { useGetCryptosQuery } from "../services/cryptoApi";
-
 
 export default function Dashboard() {
   const { data, isFetching } = useGetCryptosQuery();
@@ -48,48 +48,50 @@ export default function Dashboard() {
           <GlobalStatsCard /> */}
         </div>
 
+        <div className=" py-10">
+          <div className="header flex items-center justify-between">
 
 
+            <div className="">
+
+            <h2 className="text-2xl  my-4 font-extrabold">
+              Top Ten Cryptocurrencies in the world{" "}
+            </h2>
 
 
-<div className=" py-10">
+            <Cryptocurrencies />
+            </div>
+          
 
-<div className="header flex items-center justify-between">
+            <Link to="/crytocurrencies" className="font-medium">
+              {" "}
+              See more{" "}
+            </Link>
+          </div>
 
-<h2 className="text-2xl  my-4 font-extrabold">Top Ten Cryptocurrencies in the world </h2>
+          {/* <Cryptocurrencies /> */}
+        </div>
 
-<Link to="/crytocurrencies" className="font-medium" > See  more </Link>
-</div>
+        <div className=" py-10">
+          <div className="header flex items-center justify-between">
 
+          <div className="">
+            <h2 className="text-2xl  my-4 font-extrabold">
+              Latest Cryptocurrencies News{" "}
+            </h2>
 
+            <News/>
 
-{/* <Cryptocurrencies /> */}
+            </div>
 
+            <Link to="/crytocurrencies" className="font-medium">
+              {" "}
+              See more{" "}
+            </Link>
+          </div>
 
-</div>
-
-
-
-
-
-<div className=" py-10">
-
-
-<div className="header flex items-center justify-between">
-
-<h2 className="text-2xl  my-4 font-extrabold">Top Ten Cryptocurrencies News </h2>
-
-<Link to="/crytocurrencies" className="font-medium" > See  more </Link>
-</div>
-
-
-
-{/* <News /> */}
-
-
-</div>
-
-
+          {/* <News /> */}
+        </div>
       </div>
     </>
   );
