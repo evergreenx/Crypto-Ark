@@ -8,13 +8,23 @@ import Cryptocurrencies from "../pages/Cryptocurrencies";
 import News from "../pages/News";
 
 import { useGetCryptosQuery } from "../services/cryptoApi";
+import { useLocation } from 'react-router-dom'
 
 export default function Dashboard() {
-  const { data, isFetching } = useGetCryptosQuery(10);
+  const location = useLocation();
+  console.log(location, 'check am');
+  const { data, isFetching } = useGetCryptosQuery();
 
   let globalstats = data?.data?.stats;
 
   console.log(data?.data);
+
+  let count:number;
+ 
+
+  location.pathname === '/'  ? count = 10 : count=100
+  
+  
 
   if (isFetching) {
     return <h2 className="text-4xl flex justify-center mt-20">Loading</h2>;
@@ -71,7 +81,7 @@ export default function Dashboard() {
 
 
 
-            <Cryptocurrencies simiplied />
+            <Cryptocurrencies count />
             </div>
           
 

@@ -3,26 +3,25 @@ import { useState } from "react";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import { millify } from "millify";
 
-export default function Cryptocurrencies({ simiplied }) {
-  let count = simiplied ? 10 : 100;
-  const { data: crytosList, isFetching } = useGetCryptosQuery(count);
+export default function Cryptocurrencies({ count }) {
 
-  const [crytos, setcrytos] = useState(crytosList?.data?.coins);
+  const { data: crytosList, isFetching } = useGetCryptosQuery();
 
   if (isFetching) {
     return <h1>Laoding</h1>;
   }
 
-  console.log(crytos);
+
+  console.log(count)
   return (
     <>
 
     
-<div className=" container px-8 pt-9">
+<div className=" container px-8 pt-9 w-full">
 
-      <div className=" grid grid-rows-3 grid-flow-col gap-10">
-        {crytos?.map((i) => (
-          <div className="bg-white rounded-xl p-4 " key={i.id}>
+      <div className=" grid gap-10">
+        {crytosList?.data?.coins.slice(0,count).map((i:any) => (
+          <div className="bg-white rounded-xl p-4" key={i.id}>
             <div className="card-header flex items-center justify-between my-5">
               <h3
                 className="card-title font-medium text-lg"
