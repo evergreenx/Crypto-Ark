@@ -11,7 +11,7 @@ export default function Sidebar() {
     <>
       <AdminNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div
-        className={`h-screen w-full  fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
+        className={` fixed h-screen w-full  fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
       >
         <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
           <img src={Logo} alt="logo" className="w-28" />

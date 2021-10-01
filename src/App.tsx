@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Sidebar />
-      <div className="md:ml-64">
+      <div className="md:ml-64 px-8">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/cryptocurrencies" component={Cryptocurrencies} />

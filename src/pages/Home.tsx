@@ -13,17 +13,12 @@ import { useLocation } from 'react-router-dom'
 export default function Dashboard() {
   const location = useLocation();
   console.log(location, 'check am');
-  const { data, isFetching } = useGetCryptosQuery();
+  const { data, isFetching } = useGetCryptosQuery(10);
 
   let globalstats = data?.data?.stats;
 
   console.log(data?.data);
 
-  let count:number;
- 
-
-  location.pathname === '/'  ? count = 10 : count=100
-  
   
 
   if (isFetching) {
@@ -32,7 +27,7 @@ export default function Dashboard() {
   return (
     <>
     
-      <div className=" container px-8 pt-9">
+      <div className=" container pt-9">
         <h2 className="text-2xl  my-4 font-extrabold">
           Global Cryptocurrencies Statistics
         </h2>
@@ -71,7 +66,7 @@ export default function Dashboard() {
               Top Ten Cryptocurrencies in the world{" "}
             </h2>
 
-            <Link to="/news" className="font-medium">
+            <Link to="/cryptocurrencies" className="font-medium">
               {" "}
               See more{" "}
             </Link>
@@ -81,7 +76,7 @@ export default function Dashboard() {
 
 
 
-            <Cryptocurrencies count />
+            <Cryptocurrencies simplified />
             </div>
           
 
