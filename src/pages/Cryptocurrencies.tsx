@@ -24,9 +24,9 @@ export default function Cryptocurrencies({ simplified }) {
   
   }, [coinsdata , searchvalue])
 
-  if (isFetching) {
-    return <h1>Laoding</h1>;
-  }
+  // if (isFetching) {
+  //   return <h1>Laoding</h1>;
+  // }
 
   console.log(searchvalue);
 
@@ -42,7 +42,7 @@ export default function Cryptocurrencies({ simplified }) {
       <div className=" container  pt-9 w-full">
 
         {!simplified && (
-   <div className="search w-60 bg-white my-5 text-primary-brand">
+   <div className="search w-60 my-5 text-primary-brand">
    <InputIcon
      type="text"
      color="orange"

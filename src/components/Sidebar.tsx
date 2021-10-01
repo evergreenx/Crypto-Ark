@@ -11,7 +11,7 @@ export default function Sidebar() {
     <>
       <AdminNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div
-        className={` fixed h-screen w-full  fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
+        className={` fixed h-screen w-full top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
       >
         <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
           <img src={Logo} alt="logo" className="w-28" />
@@ -41,16 +41,6 @@ export default function Sidebar() {
                   Cryptocurrencies
                 </NavLink>
               </li>
-              <li className="rounded-lg mb-2 ">
-                <NavLink
-                  to="/exchanges"
-                  className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
-                  activeClassName="bg-gradient-to-tr bg-orange-500 text-white shadow-md"
-                >
-                  <Icon name="toc" size="2xl" />
-                  Exchanges
-                </NavLink>
-              </li>
               <li className="rounded-lg mb-2 text-gray-700">
                 <NavLink
                   to="/news"
@@ -61,6 +51,17 @@ export default function Sidebar() {
                   News
                 </NavLink>
               </li>
+              <li className="rounded-lg mb-2 ">
+                <NavLink
+                  to="/exchanges"
+                  className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
+                  activeClassName="bg-gradient-to-tr bg-orange-500 text-white shadow-md"
+                >
+                  <Icon name="toc" size="2xl" />
+                  Exchanges
+                </NavLink>
+              </li>
+             
 
               <li className="rounded-lg mb-2 text-gray-700">
                 <NavLink

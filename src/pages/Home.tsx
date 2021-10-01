@@ -80,7 +80,7 @@ export default function Dashboard() {
                   Latest Cryptocurrencies News{" "}
                 </h2>
 
-                <Link to="/cryptocurrencies" className="font-medium">
+                <Link to="/news" className="font-medium">
                   {" "}
                   See more{" "}
                 </Link>
