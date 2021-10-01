@@ -8,25 +8,22 @@ import Cryptocurrencies from "../pages/Cryptocurrencies";
 import News from "../pages/News";
 
 import { useGetCryptosQuery } from "../services/cryptoApi";
-import { useLocation } from 'react-router-dom'
+import { useLocation } from "react-router-dom";
 
 export default function Dashboard() {
   const location = useLocation();
-  console.log(location, 'check am');
+  console.log(location, "check am");
   const { data, isFetching } = useGetCryptosQuery(10);
 
   let globalstats = data?.data?.stats;
 
   console.log(data?.data);
 
-  
-
   if (isFetching) {
     return <h2 className="text-4xl flex justify-center mt-20">Loading</h2>;
   }
   return (
     <>
-    
       <div className=" container pt-9">
         <h2 className="text-2xl  my-4 font-extrabold">
           Global Cryptocurrencies Statistics
@@ -56,56 +53,44 @@ export default function Dashboard() {
 
         <div className=" py-10">
           <div className="">
-
-
             <div className="">
+              <div className=" flex items-center justify-between">
+                <h2 className="text-2xl  my-4 font-extrabold">
+                  Top Ten Cryptocurrencies in the world{" "}
+                </h2>
 
-<div className=" flex items-center justify-between">
+                <Link to="/cryptocurrencies" className="font-medium">
+                  {" "}
+                  See more{" "}
+                </Link>
+              </div>
 
-<h2 className="text-2xl  my-4 font-extrabold">
-              Top Ten Cryptocurrencies in the world{" "}
-            </h2>
-
-            <Link to="/cryptocurrencies" className="font-medium">
-              {" "}
-              See more{" "}
-            </Link>
-
-</div>
-
-
-
-
-            <Cryptocurrencies simplified />
+              <Cryptocurrencies simplified />
             </div>
-          
-
-
-          
           </div>
 
           {/* <Cryptocurrencies /> */}
         </div>
 
         <div className=" py-10">
-          <div className="header flex items-center justify-between">
-
           <div className="">
-            <h2 className="text-2xl  my-4 font-extrabold">
-              Latest Cryptocurrencies News{" "}
-            </h2>
+            <div className="">
+              <div className=" flex items-center justify-between">
+                <h2 className="text-2xl  my-4 font-extrabold">
+                  Latest Cryptocurrencies News{" "}
+                </h2>
 
-            <News/>
+                <Link to="/cryptocurrencies" className="font-medium">
+                  {" "}
+                  See more{" "}
+                </Link>
+              </div>
 
+              <News simplified />
             </div>
-
-            <Link to="/crytocurrencies" className="font-medium">
-              {" "}
-              See more{" "}
-            </Link>
           </div>
 
-          {/* <News /> */}
+          {/* <Cryptocurrencies /> */}
         </div>
       </div>
     </>

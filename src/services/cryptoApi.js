@@ -19,18 +19,4 @@ export const cryptoApi = createApi({
   }),
 });
 
-// var axios = require("axios").default;
-
-// var options = {
-//   method: 'GET',
-//   url: 'https://coinranking1.p.rapidapi.com/exchanges',
-//   headers: {
-
-// };
-
-// axios.request(options).then(function (response) {
-// 	console.log(response.data);
-// }).catch(function (error) {
-// 	console.error(error);
-// });
 export const { useGetCryptosQuery } = cryptoApi;

@@ -6,11 +6,13 @@ import InputIcon from "@material-tailwind/react/InputIcon";
 
 export default function Cryptocurrencies({ simplified }) {
   const count = simplified ? 10 : 100;
+  
+  
   const [searchvalue, setSearchValue] = useState("");
 
 
   const { data: crytosList, isFetching } = useGetCryptosQuery(count);
-  const [coinsdata, setCoinsData] = useState(crytosList?.data?.coins);
+  const [coinsdata] = useState(crytosList?.data?.coins);
   const [filtered, setFiltered] = useState([])
 
   useEffect(() => {
@@ -27,6 +29,10 @@ export default function Cryptocurrencies({ simplified }) {
   }
 
   console.log(searchvalue);
+
+
+
+
 
 //   const searchCoins = () => 
  
