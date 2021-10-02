@@ -57,7 +57,7 @@ export default function Cryptocurrencies({ simplified }) {
         )}
      
 
-        <div className="grid grid-flow-row grid-cols-3 gap-10">
+        <div className="grid grid-flow-row lg:grid-cols-3 gap-10">
           {filtered?.map((i: any) => (
             <div className="bg-white rounded-xl p-4" key={i.id}>
               <div className="card-header flex items-center justify-between my-5">

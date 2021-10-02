@@ -28,9 +28,9 @@ export default function Dashboard() {
         <h2 className="text-2xl  my-4 font-extrabold">
           Global Cryptocurrencies Statistics
         </h2>
-        <div className=" grid  grid-rows-2 grid-flow-col gap-4">
+        <div className=" grid grid-rows-2 grid-flow-col gap-4">
           <GlobalStatsCard
-            data={globalstats?.total}
+            data={millify(globalstats?.total)}
             title={"Total Cryptocurrencies"}
           />
           <GlobalStatsCard
@@ -54,7 +54,7 @@ export default function Dashboard() {
         <div className=" py-10">
           <div className="">
             <div className="">
-              <div className=" flex items-center justify-between">
+              <div className="flex justify-between lg:flex-row flex-col">
                 <h2 className="text-2xl  my-4 font-extrabold">
                   Top Ten Cryptocurrencies in the world{" "}
                 </h2>
@@ -75,8 +75,8 @@ export default function Dashboard() {
         <div className=" py-10">
           <div className="">
             <div className="">
-              <div className=" flex items-center justify-between">
-                <h2 className="text-2xl  my-4 font-extrabold">
+              <div className=" flex justify-between lg:flex-row flex-col">
+                <h2 className="text-2xl  my-4 font-extrabold ">
                   Latest Cryptocurrencies News{" "}
                 </h2>
 
