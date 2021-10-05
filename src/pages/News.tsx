@@ -56,10 +56,14 @@ export default function News({ simplified }) {
       
 
 
-      {isFetching ?<h1>Loading</h1> :( <div className="grid grid-flow-row grid-cols-1 gap-10 pt-9 w-full">
+      {isFetching ?(
+
+     <h2 className="text-4xl animate-pulse font-bold flex justify-center mt-20 text-orange-500">Loading</h2>
+
+      ) :( <div className="grid grid-flow-row grid-cols-1 gap-10 pt-9 w-full">
         {crytosNewsList?.value.map((news) => (
           <>
-            <a href={news.url}>
+            <a href={news.url} key={news.id}>
               <div className="flex lg:flex-row flex-col w-full hover:shadow-xl transition duration-500 ease-in-out ">
                 <div
                   className="h-48 lg:h-auto lg:w-48 flex-none bg-no-repeat rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-cover"

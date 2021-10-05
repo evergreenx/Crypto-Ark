@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/cryptocurrencies" component={Cryptocurrencies} />
 
-          <Route exact path="/crytoDetails" component={CrytoDetails} />
+          <Route exact path="/crytoDetails/:coinId" component={CrytoDetails} />
 
           <Route exact path="/exchanges" component={Exchanges} />
           <Route exact path="/news" component={News} />

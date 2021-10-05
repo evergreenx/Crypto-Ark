@@ -51,7 +51,7 @@ export default function Sidebar() {
                   News
                 </NavLink>
               </li>
-              <li className="rounded-lg mb-2 ">
+              {/* <li className="rounded-lg mb-2 ">
                 <NavLink
                   to="/exchanges"
                   className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
@@ -60,10 +60,10 @@ export default function Sidebar() {
                   <Icon name="toc" size="2xl" />
                   Exchanges
                 </NavLink>
-              </li>
+              </li> */}
              
 
-              <li className="rounded-lg mb-2 text-gray-700">
+              {/* <li className="rounded-lg mb-2 text-gray-700">
                 <NavLink
                   to="/profile"
                   className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
@@ -72,7 +72,7 @@ export default function Sidebar() {
                   <Icon name="account_circle" size="2xl" />
                   Profile
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

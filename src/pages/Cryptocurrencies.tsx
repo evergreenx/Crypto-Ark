@@ -3,7 +3,7 @@ import { useState , useEffect } from "react";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import { millify } from "millify";
 import InputIcon from "@material-tailwind/react/InputIcon";
-
+import {Link } from 'react-router-dom'
 export default function Cryptocurrencies({ simplified }) {
   const count = simplified ? 10 : 100;
   
@@ -24,11 +24,12 @@ export default function Cryptocurrencies({ simplified }) {
   
   }, [coinsdata , searchvalue])
 
-  // if (isFetching) {
-  //   return <h1>Laoding</h1>;
-  // }
+  if (isFetching) {
+    return <h2 className="text-4xl animate-pulse font-bold flex justify-center mt-20 text-orange-500">Loading</h2>;
 
-  console.log(searchvalue);
+  }
+
+  // console.log(searchvalue);
 
 
 
@@ -48,7 +49,7 @@ export default function Cryptocurrencies({ simplified }) {
      color="orange"
      size="regular"
      outline={true}
-     placeholder="Search "
+     placeholder="Search Cryptocurrencies "
      iconFamily="material-icons"
      iconName="search"
      onChange={(e: any) => setSearchValue(e.target.value)}
@@ -57,10 +58,13 @@ export default function Cryptocurrencies({ simplified }) {
         )}
      
 
+
         <div className="grid grid-flow-row lg:grid-cols-3 gap-10">
           {filtered?.map((i: any) => (
             <div className="bg-white rounded-xl p-4" key={i.id}>
               <div className="card-header flex items-center justify-between my-5">
+              
+              <Link to={'/crytoDetails/'+i.id}>
                 <h3
                   className="card-title font-medium text-lg"
                   style={{ color: i.color }}
@@ -68,7 +72,7 @@ export default function Cryptocurrencies({ simplified }) {
                   <span> {i.rank}.</span>
                   {i.name}
                 </h3>
-
+</Link>
                 <img
                   src={i.iconUrl}
                   alt="coin url"

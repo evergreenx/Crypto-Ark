@@ -17,10 +17,10 @@ export default function Dashboard() {
 
   let globalstats = data?.data?.stats;
 
-  console.log(data?.data);
+  // console.log(data?.data);
 
   if (isFetching) {
-    return <h2 className="text-4xl flex justify-center mt-20">Loading</h2>;
+    return <h2 className="text-4xl animate-pulse font-bold flex justify-center mt-20 text-orange-500">Loading</h2>;
   }
   return (
     <>
