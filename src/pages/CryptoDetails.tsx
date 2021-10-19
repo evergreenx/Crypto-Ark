@@ -26,7 +26,7 @@ const CryptoDetails = () => {
   // console.log(coinId)
 
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  const [timePeriod, setTimePeriod] = useState("7d");
+  const [ setTimePeriod] = useState("7d");
 
   const cryptoDetail = data?.data?.coin;
 
