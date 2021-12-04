@@ -3,7 +3,7 @@ import { useGetCryptosNewsQuery } from "../services/cryptoNewsApi";
 import PlacholderImg from "../assets/img/placeholder.png";
 import moment from "moment";
 
-import { useGetCryptosQuery } from "../services/cryptoApi";
+import { useGetCryptosQuery ,  } from "../services/cryptoApi";
 
 
 

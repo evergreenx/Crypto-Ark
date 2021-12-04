@@ -2011,6 +2011,16 @@ video {
 .lg\:justify-start{justify-content:flex-start}
 .lg\:px-36{padding-left:9rem;padding-right:9rem}
 .lg\:text-left{text-align:left}}
+body{
+    background-color: #121212 ;
+    color:aliceblue;
+}
+.topnav{
+
+ background-color:
+ linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(245, 158, 11)) !important
+;
 
 
-
+ /* background: ; */
+}
