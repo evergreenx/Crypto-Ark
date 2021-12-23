@@ -26,7 +26,7 @@ const CryptoDetails = () => {
   // console.log(coinId)
 
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  const [timePeriod, setTimePeriod] = useState("7d");
+  const [setTimePeriod] = useState("7d");
 
   const cryptoDetail = data?.data?.coin;
 
@@ -87,9 +87,8 @@ const CryptoDetails = () => {
     },
     {
       title: "Total Supply",
-      value: `$ ${
-        cryptoDetail.totalSupply ? millify(cryptoDetail?.totalSupply) : "N/A"
-      }`,
+      value: `$ ${cryptoDetail.totalSupply ? millify(cryptoDetail?.totalSupply) : "N/A"
+        }`,
       icon: <FallOutlined />,
     },
     {
@@ -119,7 +118,7 @@ const CryptoDetails = () => {
           onChange={(e) => setTimePeriod(e.target.value)}
           className="block w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
           placeholder="Select time period"
-      
+
         >
           <option selected> 7h </option>
           {time.map((i) => (
@@ -177,8 +176,8 @@ const CryptoDetails = () => {
 
       <h3 className="cryptoDetail">
         What Is {cryptoDetail?.name} </h3>
-        {HTMLReactParser(cryptoDetail?.description)}
-    
+      {HTMLReactParser(cryptoDetail?.description)}
+
     </div>
   );
 };

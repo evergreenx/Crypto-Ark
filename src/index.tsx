@@ -3,17 +3,30 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { hotjar } from 'react-hotjar';
 
-import {Provider} from 'react-redux'
+
+
+import { Provider } from 'react-redux'
 import store from './redux/store'
 
+hotjar.initialize(2760029, 6);
+
+// Identify the user
+// hotjar.identify('USER_ID', { userProperty: 'value' });
+
+// Add an event
+// hotjar.event('button-click');
+
+// // Update SPA state
+// hotjar.stateChange('/my/page');
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
 
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
 
         </Provider>
 
