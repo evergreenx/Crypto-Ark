@@ -10,7 +10,7 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
     const location = useLocation().pathname;
 
     return (
-        <nav className="topnav md:ml-64 py-8 px-3">
+        <nav className="topnav md:ml-64 py-8 px-3 bg-primary-brand">
             <div className="container max-w-full mx-auto flex items-center justify-between md:pr-8 md:pl-10">
                 <div className="md:hidden">
                     <Button
