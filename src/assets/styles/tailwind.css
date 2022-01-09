@@ -2017,13 +2017,8 @@ video {
 } */
 .topnav{
 
-    background-color: #ff8900;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-
+    background-color: #ff8900 !important;
+  
 
 
  /* background: ; */
