@@ -10,26 +10,18 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import '@material-tailwind/react/tailwind.css';
-
-
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "@material-tailwind/react/tailwind.css";
 
 /* body{
     background-color: blue ;
 
 } */
 
+.topnav {
+  background-color: #ff9800;
 
-.topnav{
-
- background-color: #
- linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(245, 158, 11)) !important
-;
-
-
- /* background: ; */
+  /* background: ; */
 }
