@@ -2017,9 +2017,13 @@ video {
 } */
 .topnav{
 
- background-color:
- linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(245, 158, 11)) !important
-;
+    background-color: #ff8900;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
 
 
  /* background: ; */
